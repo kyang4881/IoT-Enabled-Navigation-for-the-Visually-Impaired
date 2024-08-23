@@ -1,7 +1,7 @@
 ## VisionRail: IoT-Enabled Navigation for the Visually Impaired
 
 <p align="center">
-  <img src="https://github.com/kyang4881/\IoT-Enabled-Navigation-for-the-Visually-Impaired/blob/main/media/profile.png" width="1200" />
+  <img src="https://github.com/kyang4881/IoT-Enabled-Navigation-for-the-Visually-Impaired/blob/main/media/profile.png" width="1200" />
 </p>
 
 ---
