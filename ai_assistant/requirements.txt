@@ -1,0 +1,16 @@
+gradio
+autoawq
+transformers
+bitsandbytes
+peft
+safetensors 
+sentencepiece 
+streamlit 
+chromadb 
+langchain 
+sentence-transformers 
+pypdf
+gtts
+playsound
+pygobject
+accelerate

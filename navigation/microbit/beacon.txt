@@ -1,0 +1,21 @@
+def on_received_string(receivedString):
+    global packet_strength
+    if receivedString.split(":")[0] == "u":
+        packet_strength = radio.received_packet(RadioPacketProperty.SIGNAL_STRENGTH)
+        radio.send_string("b:" + beacon_id + ";" + receivedString + ";" + "s:" + str(packet_strength) + ";" + str((packet_strength + (junction + position))) + ";")
+radio.on_received_string(on_received_string)
+
+packet_strength = 0
+beacon_id = ""
+position = 0
+junction = 0
+radio.set_group(5)
+radio.set_transmit_power(7)
+junction = 2
+position = 3
+beacon_id = "" + str(junction) + "-" + str(position)
+
+def on_forever():
+    basic.pause(30000)
+    radio.send_string("hb:" + beacon_id + ";" + "t:" + str(control.event_timestamp()))
+basic.forever(on_forever)

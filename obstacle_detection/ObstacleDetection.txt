@@ -1,0 +1,34 @@
+distance = 0
+
+def on_forever():
+    global distance
+    distance = sonar.ping(DigitalPin.P0, DigitalPin.P0, PingUnit.CENTIMETERS)
+    if distance < 120:
+        basic.show_icon(IconNames.NO)
+        music.play(music.builtin_playable_sound_effect(soundExpression.sad),
+            music.PlaybackMode.LOOPING_IN_BACKGROUND)
+    else:
+        basic.clear_screen()
+basic.forever(on_forever)
+
+def on_forever2():
+    global distance
+    distance = sonar.ping(DigitalPin.P1, DigitalPin.P1, PingUnit.CENTIMETERS)
+    if distance < 120:
+        basic.show_icon(IconNames.NO)
+        music.play(music.builtin_playable_sound_effect(soundExpression.sad),
+            music.PlaybackMode.LOOPING_IN_BACKGROUND)
+    else:
+        basic.clear_screen()
+basic.forever(on_forever2)
+
+def on_forever3():
+    global distance
+    distance = sonar.ping(DigitalPin.P2, DigitalPin.P2, PingUnit.CENTIMETERS)
+    if distance < 120:
+        basic.show_icon(IconNames.NO)
+        music.play(music.builtin_playable_sound_effect(soundExpression.sad),
+            music.PlaybackMode.LOOPING_IN_BACKGROUND)
+    else:
+        basic.clear_screen()
+basic.forever(on_forever3)
